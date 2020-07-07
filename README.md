@@ -22,6 +22,9 @@ USE
 ````
 
 ### GET_PICTURE
+ Get full screen screenshot
+### IMALIVE
+Send IMALIVE.
 2 step:
 
 1. get pic id,
