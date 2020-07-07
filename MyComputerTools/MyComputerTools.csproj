@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{CB639FB3-21B1-4814-B620-5B6E214EF825}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MyComputerTools</RootNamespace>
+    <AssemblyName>MyComputerTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>dll\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>dll\json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoWork\dataInfo\Json\RetJson.cs" />
+    <Compile Include="DoWork\dataInfo\RetCode.cs" />
+    <Compile Include="DoWork\dataInfo\RunInfo.cs" />
+    <Compile Include="DoWork\DoCmd.cs" />
+    <Compile Include="DoWork\image\ImageComp.cs" />
+    <Compile Include="DoWork\remote\LoginWork.cs" />
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="publicUtils\LogHelper.cs" />
+    <Compile Include="publicUtils\publicUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dll\json\Newtonsoft.Json.dll" />
+    <None Include="dll\json\Newtonsoft.Json.pdb" />
+    <None Include="dll\json\Newtonsoft.Json.xml" />
+    <None Include="dll\log4net\log4net.dll" />
+    <None Include="dll\log4net\log4net.pdb" />
+    <None Include="dll\log4net\log4net.xml" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rec\A Sealed Note.ico" />
+    <None Include="rec\Accounting Quicken.ico" />
+    <None Include="rec\Airport Base Station.ico" />
+    <None Include="rec\Alliance Banner.ico" />
+    <None Include="rec\AOL.ico" />
+    <None Include="rec\Appleworks.ico" />
+    <None Include="rec\Backup.ico" />
+    <None Include="rec\Calculator.ico" />
+    <None Include="rec\Defias Script.ico" />
+    <None Include="rec\Document.ico" />
+    <None Include="rec\Dreamweaver.ico" />
+    <None Include="rec\DVD Player.ico" />
+    <None Include="rec\E-mail.ico" />
+    <None Include="rec\Email Entourage.ico" />
+    <None Include="rec\Fire Elemental.ico" />
+    <None Include="rec\Fireworks.ico" />
+    <None Include="rec\Flash.ico" />
+    <None Include="rec\Freehand.ico" />
+    <None Include="rec\Horde Banner.ico" />
+    <None Include="rec\HTML Editor.ico" />
+    <None Include="rec\iSync.ico" />
+    <None Include="rec\Paint Photoshop.ico" />
+    <None Include="rec\Plain Letter.ico" />
+    <None Include="rec\Presentation Powerpoint.ico" />
+    <None Include="rec\Preview.ico" />
+    <None Include="rec\Quicktime Player.ico" />
+    <None Include="rec\Sealed Recruitment Letter.ico" />
+    <None Include="rec\Solid Iron Chest.ico" />
+    <None Include="rec\Spamfire_icon.ico" />
+    <None Include="rec\Spreadsheet Excel.ico" />
+    <None Include="rec\Stickies.ico" />
+    <None Include="rec\System Prefs.ico" />
+    <None Include="rec\Terminal.ico" />
+    <None Include="rec\Vector App.ico" />
+    <None Include="rec\Virtual PC.ico" />
+    <None Include="rec\Web Browser.ico" />
+    <None Include="rec\Word Processor Word.ico" />
+    <None Include="rec\World of Warcraft App.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dll\json" />
+    <Folder Include="dll\log4net" />
+    <Folder Include="DoWork" />
+    <Folder Include="DoWork\dataInfo\Json" />
+    <Folder Include="DoWork\image" />
+    <Folder Include="Config" />
+    <Folder Include="DoWork\dataInfo" />
+    <Folder Include="DoWork\remote" />
+    <Folder Include="rec" />
+    <Folder Include="publicUtils" />
+    <Folder Include="dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
