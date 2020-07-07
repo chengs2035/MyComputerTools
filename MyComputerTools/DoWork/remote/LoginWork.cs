@@ -17,6 +17,9 @@ using System.Drawing;
 using MyComputerTools.DoWork.dataInfo.Json;
 using MyComputerTools.publicUtils;
 using Newtonsoft.Json;
+
+using System.Configuration;
+
 namespace MyComputerTools.DoWork.remote
 {
 	/// <summary>
@@ -192,10 +195,10 @@ namespace MyComputerTools.DoWork.remote
 		private LoginWork(){
 			//临时这样写，后续改到配置文件中
 			runinfo =new RunInfo();
-			runinfo.Url="";
-			runinfo.Username="";
-			runinfo.Pwd="";
-			runinfo.Key01="";
+			runinfo.Url=ConfigurationManager.AppSettings["server.url"];
+			runinfo.Username=ConfigurationManager.AppSettings["server.Username"];
+			runinfo.Pwd=ConfigurationManager.AppSettings["server.Pwd"];
+			runinfo.Key01=ConfigurationManager.AppSettings["server.Key01"];
 		}
 
 		private static readonly object padlock = new object();
